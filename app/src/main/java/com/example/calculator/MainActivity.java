@@ -237,4 +237,16 @@ public Boolean noDoubleSymbols(String equation){
         equationDisplay.append("*pi");
         
     }
+
+    public void pushClear(View view){
+        String temp = equationDisplay.getText().toString();
+        if(temp.length()==0){
+            equationDisplay.setText("");
+        }
+        else
+        {
+           temp = temp.substring(0,temp.length()-1);
+           equationDisplay.setText(temp);
+        }
+    }
 }

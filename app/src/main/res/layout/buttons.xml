@@ -4,7 +4,7 @@
         <Button
             android:id="@+id/button_all_clear"
             android:text="AC"
-            android:onClick="pushAllClear" />
+            android:onClick="pushAllClear"/>
 
         <Button
             android:id="@+id/button_positive_negative"
@@ -80,7 +80,10 @@
             android:id="@+id/button_subtract"
             android:text="-"
             android:onClick="pushSubtract"/>
-
+        <Button
+            android:id="@+id/button_clear"
+            android:text="@string/clear"
+            android:onClick="pushClear"/>
         <Button
             android:id="@+id/button_0"
             android:text="0"
