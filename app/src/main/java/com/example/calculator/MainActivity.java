@@ -148,7 +148,6 @@ public Boolean noDoubleSymbols(String equation){
 
     public void pushPercent(View view){
         String equation;
-        String brokenEquation;
         double result;
         String resultString;
 
@@ -170,8 +169,12 @@ public Boolean noDoubleSymbols(String equation){
     
     public void pushTangent(View view){
         String equation = equationDisplay.getText().toString();
-        if(noDoubleSymbols(equation)) {
+        if(equation.length()==0){
             equationDisplay.append("tan(");
+
+        }
+        else if(noDoubleSymbols(equation)) {
+            equationDisplay.append("*tan(");
         }
         else
             equationDisplay.append("");
@@ -179,8 +182,12 @@ public Boolean noDoubleSymbols(String equation){
 
     public void pushSine(View view){
         String equation = equationDisplay.getText().toString();
-        if(noDoubleSymbols(equation)) {
+        if(equation.length()==0){
             equationDisplay.append("sin(");
+
+        }
+        else if(noDoubleSymbols(equation)) {
+            equationDisplay.append("*sin(");
         }
         else
             equationDisplay.append("");
@@ -188,8 +195,12 @@ public Boolean noDoubleSymbols(String equation){
     
     public void pushCos(View view){
         String equation = equationDisplay.getText().toString();
-        if(noDoubleSymbols(equation)) {
+        if(equation.length()==0){
             equationDisplay.append("cos(");
+
+        }
+        else if(noDoubleSymbols(equation)) {
+            equationDisplay.append("*cos(");
         }
         else
             equationDisplay.append("");
@@ -226,16 +237,41 @@ public Boolean noDoubleSymbols(String equation){
     }
     
     public void pushLogn(View view){
-        equationDisplay.append("ln(");
+        {
+            String equation = equationDisplay.getText().toString();
+            if(equation.length()==0){
+                equationDisplay.append("ln(");
+
+            }
+            else if (noDoubleSymbols(equation)) {
+                equationDisplay.append("*ln(");
+            } else
+                equationDisplay.append("");
+        }
     }
     
-    public void pushSqRt(View view){
-        equationDisplay.append("sqrt(");
+    public void pushSqRt(View view)        {
+        String equation = equationDisplay.getText().toString();
+        if(equation.length()==0){
+            equationDisplay.append("sqrt(");
+
+        }
+        else if (noDoubleSymbols(equation)) {
+            equationDisplay.append("*sqrt(");
+        } else
+            equationDisplay.append("");
     }
     
     public void pushPI(View view){
-        equationDisplay.append("*pi");
-        
+        String equation = equationDisplay.getText().toString();
+        if(equation.length()==0){
+            equationDisplay.append("pi");
+
+        }
+        else if (noDoubleSymbols(equation)) {
+            equationDisplay.append("*pi");
+        } else
+            equationDisplay.append("");
     }
 
     public void pushClear(View view){
