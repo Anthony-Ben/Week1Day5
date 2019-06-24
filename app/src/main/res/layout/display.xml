@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/textBoxLayout"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_result"
+        android:gravity="right"
+        android:outlineProvider="paddedBounds"
+        android:background="@color/textBoxColor"
+        android:textSize="20sp"
+        android:hint="0"/>
+
+    <TextView
+        android:id="@+id/tvEquation"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_display"
+        android:gravity="right"
+        android:background="@color/textBoxColor"
+        android:hint="0"/>
+
+</LinearLayout>

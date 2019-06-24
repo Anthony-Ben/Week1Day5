@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+
+        <include
+        layout="@layout/display"></include>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+        android:layout_marginStart="15dp">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:rowCount="5">
+
+            <include layout="@layout/buttons">
+            </include>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="5">
+
+            <Button
+                android:id="@+id/button_sqrt"
+                android:text="sqrt"
+                android:onClick="pushSqRt"/>
+
+            <Button
+                android:id="@+id/button_open_parenthesis"
+                android:text="("
+                android:onClick="pushOpenParenthesis"/>
+
+            <Button
+                android:id="@+id/button_close_parenthesis"
+                android:text=")"
+                android:onClick="pushCloseParenthesis"/>
+
+            <Button
+                android:id="@+id/button_rand"
+                android:text="RAND"
+                android:onClick="pushRandom"/>
+
+            <Button
+                android:id="@+id/button_pi"
+                android:text="PI"
+                android:onClick="pushPI"/>
+
+            <Button
+                android:id="@+id/button_logN"
+                android:text="LogN"
+                android:onClick="pushLogn"/>
+
+            <Button android:id="@+id/button_sin"
+                android:text="sin"
+                android:onClick="pushSine"/>
+
+            <Button android:id="@+id/button_cosine"
+                android:text="COS"
+                android:onClick="pushCos"/>
+
+            <Button android:id="@+id/button_tangent"
+                android:text="tan"
+                android:onClick="pushTangent"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
